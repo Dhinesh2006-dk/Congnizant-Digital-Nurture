@@ -1,0 +1,386 @@
+/* =======================================
+   GLOBAL RESET
+   CSS Exercise 3 - Universal Selector
+======================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =======================================
+   BODY STYLING
+   CSS Exercise 1 & 4
+======================================= */
+
+body{
+
+    background-color:#f4f4f4;
+
+    background-image:
+    linear-gradient(
+        rgba(255,255,255,0.9),
+        rgba(255,255,255,0.9)
+    );
+
+    font-family:Arial, sans-serif;
+
+    line-height:1.6;
+
+    padding:20px;
+}
+
+/* =======================================
+   HEADER STYLES
+======================================= */
+
+header{
+
+    background:#003366;
+
+    color:white;
+
+    padding:20px;
+
+    text-align:center;
+
+    border-radius:10px;
+}
+
+/* =======================================
+   MAIN HEADER
+   CSS Exercise 3 - ID Selector
+======================================= */
+
+#mainHeader{
+
+    letter-spacing:2px;
+}
+
+/* =======================================
+   H2 ELEMENT SELECTOR
+   CSS Exercise 3
+======================================= */
+
+h2{
+
+    margin-top:30px;
+
+    margin-bottom:15px;
+
+    color:#003366;
+
+    background:
+    linear-gradient(
+        to right,
+        #dbeafe,
+        #93c5fd
+    );
+
+    padding:10px;
+
+    border-radius:5px;
+}
+
+/* =======================================
+   GROUPING SELECTOR
+   CSS Exercise 3
+======================================= */
+
+h3,
+p{
+
+    margin:10px;
+}
+
+/* =======================================
+   NAVIGATION
+   CSS Exercise 6
+======================================= */
+
+nav ul{
+
+    list-style-type:none;
+
+    list-style-position:inside;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-top:15px;
+}
+
+nav ul li{
+
+    padding:5px;
+}
+
+nav a:link{
+
+    color:white;
+
+    text-decoration:none;
+}
+
+nav a:hover{
+
+    color:yellow;
+}
+
+nav a:active{
+
+    color:red;
+}
+
+nav a:visited{
+
+    color:#d1d5db;
+}
+
+/* =======================================
+   EVENT CARDS
+   CSS Exercise 3 & 8
+======================================= */
+
+.eventCard{
+
+    background:white;
+
+    border:2px solid #3b82f6;
+
+    padding:20px;
+
+    margin:20px 0;
+
+    border-radius:10px;
+
+    outline:none;
+}
+
+/* =======================================
+   TABLE STYLING
+   CSS Exercise 7
+======================================= */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    text-align:center;
+}
+
+th,
+td{
+
+    border:1px solid #333;
+
+    padding:15px;
+
+    background:white;
+}
+
+tr:nth-child(even){
+
+    background:#f1f5f9;
+}
+
+/* =======================================
+   EVENT IMAGES
+======================================= */
+
+.eventImage{
+
+    width:250px;
+
+    height:180px;
+
+    border:4px solid #2563eb;
+
+    border-radius:10px;
+
+    transition:0.3s;
+}
+
+.eventImage:hover{
+
+    transform:scale(1.05);
+}
+
+/* =======================================
+   FORM STYLING
+   CSS Exercise 8
+======================================= */
+
+form{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:10px;
+
+    margin-top:5px;
+
+    margin-bottom:15px;
+
+    border:1px solid #ccc;
+
+    border-radius:5px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline:3px solid orange;
+}
+
+/* =======================================
+   BUTTONS
+======================================= */
+
+button{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+}
+
+button:hover{
+
+    background:#1d4ed8;
+}
+
+/* =======================================
+   FEEDBACK AREA
+======================================= */
+
+#phoneError{
+
+    color:red;
+
+    font-weight:bold;
+}
+
+/* =======================================
+   VIDEO SECTION
+======================================= */
+
+video{
+    width:600px;
+    height:350px;
+    object-fit:cover;
+    border:3px solid #2563eb;
+    border-radius:10px;
+}
+
+/* =======================================
+   NEWS SECTION
+   CSS Exercise 9
+======================================= */
+
+.newsColumns{
+
+    column-count:2;
+
+    column-gap:30px;
+
+    column-rule:1px solid gray;
+
+    background:white;
+
+    padding:20px;
+
+    margin-top:20px;
+
+    border-radius:10px;
+}
+
+/* =======================================
+   FOOTER
+======================================= */
+
+footer{
+
+    background:#003366;
+
+    color:white;
+
+    text-align:center;
+
+    padding:15px;
+
+    margin-top:30px;
+
+    border-radius:10px;
+}
+
+/* =======================================
+   RESPONSIVE DESIGN
+   CSS Exercise 10
+======================================= */
+
+@media screen and (max-width:768px){
+
+    nav ul{
+
+        flex-direction:column;
+    }
+
+    .eventImage{
+
+        width:150px;
+
+        height:100px;
+    }
+
+    body{
+
+        font-size:14px;
+    }
+
+    .newsColumns{
+
+        column-count:1;
+    }
+}
+
+/* =======================================
+   HIDDEN VS NONE DEMO
+   CSS Exercise 8
+======================================= */
+
+.hiddenExample{
+
+    visibility:hidden;
+}
+
+.noneExample{
+
+    display:none;
+}

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Internal CSS -->
+    <style>
+        #welcomeBanner {
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .highlight {
+            background-color: yellow;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header>
+        <h1 id="mainHeader" style="color:red;">
+            Local Community Event Portal
+        </h1>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="help.html" target="_blank">
+                        Help
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Welcome Banner -->
+
+    <section id="home">
+
+        <div id="welcomeBanner">
+
+            <h2>
+                Welcome Residents!
+            </h2>
+
+            <p>
+                Join exciting events happening in your city.
+            </p>
+
+            <span style="color:red; font-weight:bold;">
+                Special Offer:
+                Register today and get priority access.
+            </span>
+
+        </div>
+
+    </section>
+
+    <!-- Events Section -->
+
+    <section id="events">
+
+        <h2>Upcoming Events</h2>
+
+        <div class="eventCard">
+
+            <h3>Music Festival</h3>
+
+            <p class="highlight">
+                Enjoy live music performances.
+            </p>
+
+        </div>
+
+        <div class="eventCard">
+
+            <h3>Food Carnival</h3>
+
+            <p>
+                Explore delicious cuisines.
+            </p>
+
+        </div>
+
+        <div class="eventCard">
+
+            <h3>Tech Expo</h3>
+
+            <p>
+                Discover the latest innovations.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Image Gallery -->
+
+    <section id="gallery">
+
+        <h2>Past Event Gallery</h2>
+
+        <table>
+
+            <tr>
+
+                <td>
+
+                    <img src="https://i.ibb.co/tM2k8H0G/Chat-GPT-Image-May-26-2026-10-52-53-PM.png"
+                        alt="Music Event"
+                        title="Music Festival"
+                        class="eventImage"
+                        ondblclick="enlargeImage(this)">
+
+                    <p>Music Festival</p>
+
+                </td>
+
+                <td>
+
+                    <img src="https://i.ibb.co/zhWzv20j/Chat-GPT-Image-May-26-2026-10-58-25-PM.png"
+                        alt="Food Event"
+                        title="Food Carnival"
+                        class="eventImage"
+                        ondblclick="enlargeImage(this)">
+
+                    <p>Food Carnival</p>
+
+                </td>
+
+                <td>
+
+                    <img src="https://i.ibb.co/tP8QN5vK/Chat-GPT-Image-May-26-2026-10-59-25-PM.png"
+                        alt="Art Event"
+                        title="Art Exhibition"
+                        class="eventImage"
+                        ondblclick="enlargeImage(this)">
+
+                    <p>Art Exhibition</p>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    <img src="https://i.ibb.co/5XbN9c2m/Chat-GPT-Image-May-26-2026-11-00-37-PM.png"
+                        alt="Dance Event"
+                        title="Dance Competition"
+                        class="eventImage"
+                        ondblclick="enlargeImage(this)">
+
+                    <p>Dance Competition</p>
+
+                </td>
+
+                <td>
+
+                    <img src="https://i.ibb.co/n8MR6RNV/Chat-GPT-Image-May-26-2026-11-02-00-PM.png"
+                        alt="Sports Event"
+                        title="Sports Meet"
+                        class="eventImage"
+                        ondblclick="enlargeImage(this)">
+
+                    <p>Sports Meet</p>
+
+                </td>
+
+                <td>
+
+                    <img src="https://i.ibb.co/CpX8Vq9X/Chat-GPT-Image-May-26-2026-11-03-00-PM.png"
+                        alt="Technology Event"
+                        title="Tech Expo"
+                        class="eventImage"
+                        ondblclick="enlargeImage(this)">
+
+                    <p>Tech Expo</p>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </section>
+
+    <!-- Registration Form -->
+
+    <section id="register">
+
+        <h2>Event Registration</h2>
+
+        <form id="registrationForm">
+
+            <label>Name:</label>
+            <input type="text"
+                   name="name"
+                   id="name"
+                   placeholder="Enter your name"
+                   required
+                   autofocus>
+
+            <br><br>
+
+            <label>Email:</label>
+            <input type="email"
+                   name="email"
+                   id="email"
+                   placeholder="Enter your email"
+                   required>
+
+            <br><br>
+
+            <label>Event Date:</label>
+            <input type="date"
+                   name="eventDate"
+                   required>
+
+            <br><br>
+
+            <label>Event Type:</label>
+
+            <select id="eventType"
+                    name="eventType"
+                    onchange="showFee(); savePreference();">
+
+                <option value="">Select Event</option>
+
+                <option value="Music Festival">
+                    Music Festival
+                </option>
+
+                <option value="Food Carnival">
+                    Food Carnival
+                </option>
+
+                <option value="Art Exhibition">
+                    Art Exhibition
+                </option>
+
+                <option value="Dance Competition">
+                    Dance Competition
+                </option>
+
+                <option value="Sports Meet">
+                    Sports Meet
+                </option>
+
+                <option value="Tech Expo">
+                    Tech Expo
+                </option>
+
+            </select>
+
+            <br><br>
+
+            <p id="eventFee"></p>
+
+            <label>Message:</label>
+
+            <textarea id="message"
+                      name="message"
+                      rows="5"
+                      cols="40"
+                      placeholder="Enter your message"></textarea>
+
+            <br><br>
+
+            <button type="submit">
+
+                Register
+
+            </button>
+
+            <br><br>
+
+            <output id="confirmationOutput">
+            </output>
+
+        </form>
+
+    </section>
+
+    <!-- Feedback Section -->
+
+    <section id="feedback">
+
+        <h2>Event Feedback</h2>
+
+        <label>Phone Number:</label>
+
+        <input type="text"
+               id="phone"
+               onblur="validatePhone()">
+
+        <p id="phoneError"></p>
+
+        <br>
+
+        <label>Feedback:</label>
+
+        <textarea id="feedbackText"
+                  rows="5"
+                  cols="50"
+                  onkeyup="countCharacters()"></textarea>
+
+        <p>
+            Characters:
+            <span id="charCount">0</span>
+        </p>
+
+    </section>
+
+    <!-- Video Section -->
+
+    <section id="videoSection">
+
+        <h2>Community Event Promo</h2>
+
+        <video width="600"
+               controls
+               oncanplay="videoReady()">
+
+            <source src="videos/promo.mp4"
+                    type="video/mp4">
+
+            Your browser does not support video.
+
+        </video>
+
+        <p id="videoMessage"></p>
+
+    </section>
+
+    <!-- User Preferences -->
+
+    <section>
+
+        <h2>User Preferences</h2>
+
+        <button onclick="clearPreferences()">
+            Clear Preferences
+        </button>
+
+    </section>
+
+    <!-- Geolocation -->
+
+    <section>
+
+        <h2>Nearby Events</h2>
+
+        <button onclick="findLocation()">
+            Find Nearby Events
+        </button>
+
+        <p id="locationResult"></p>
+
+    </section>
+
+    <!-- News Section -->
+
+    <section id="newsSection">
+
+        <h2>Community News</h2>
+
+        <div class="newsColumns">
+
+            The city council is organizing multiple community
+            programs this month. Residents are encouraged
+            to participate in cultural events, sports meets,
+            technology expos, food festivals, educational
+            workshops, and environmental awareness campaigns.
+            These programs aim to strengthen community
+            engagement and provide opportunities for learning,
+            networking, and recreation. Citizens can register
+            through the portal and stay updated with the latest
+            announcements.
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+
+    <section id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>Email: support@communityportal.com</p>
+
+        <p>Phone: +91 9876543210</p>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Local Community Event Portal
+        </p>
+
+    </footer>
+
+    <!-- JavaScript File -->
+
+    <script src="main.js"></script>
+
+</body>
+</html>
